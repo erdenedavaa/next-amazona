@@ -44,9 +44,9 @@ function PlaceOrder() {
   const taxPrice = round2(itemsPrice * 0.15)
   const totalPrice = round2(itemsPrice + shippingPrice + taxPrice)
 
-  const checkoutHandler = () => {
-    router.push('/shipping')
-  }
+  // const checkoutHandler = () => {
+  //   router.push('/shipping')
+  // }
 
   useEffect(() => {
     if (!paymentMethod) {

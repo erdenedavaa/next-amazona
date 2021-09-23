@@ -2,7 +2,6 @@ import nc from 'next-connect'
 import { isAdmin, isAuth } from '../../../../utils/auth'
 import Product from '../../../../models/Product'
 import db from '../../../../utils/db'
-import { resolveHref } from 'next/dist/shared/lib/router/router'
 
 const handler = nc()
 handler.use(isAuth, isAdmin)

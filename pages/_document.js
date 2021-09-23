@@ -26,7 +26,12 @@ MyDocument.getInitialProps = async (ctx) => {
   const originalRenderPage = ctx.renderPage
   ctx.renderPage = () => {
     return originalRenderPage({
-      enhanceApp: (App) => (props) => sheets.collect(<App {...props} />),
+      // enhanceApp: (App) =>  (props) => sheets.collect(<App {...props} />),
+
+      enhanceApp: (App) =>
+        function OngooNemelt(props) {
+          return sheets.collect(<App {...props} />)
+        },
     })
   }
   const initialProps = await Document.getInitialProps(ctx)

@@ -50,13 +50,11 @@ function reducer(state, action) {
 function ProductEdit({ params }) {
   const productId = params.id
   const { state } = useContext(Store)
-  const [
-    { loading, error, loadingUpdate, errorUpdate, loadingUpload },
-    dispatch,
-  ] = useReducer(reducer, {
-    loading: true,
-    error: '',
-  })
+  const [{ loading, error, loadingUpdate, loadingUpload }, dispatch] =
+    useReducer(reducer, {
+      loading: true,
+      error: '',
+    })
 
   const {
     handleSubmit,
