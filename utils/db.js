@@ -1,4 +1,4 @@
-import mongoose, { connections } from 'mongoose'
+import mongoose from 'mongoose'
 
 const connection = {}
 
