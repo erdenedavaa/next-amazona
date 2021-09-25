@@ -51,8 +51,11 @@ const useStyles = makeStyles({
   reviewItem: {
     marginRight: '1rem',
     borderRight: '1px #808080 solid',
-    paddingRight: '1rem'
-  }
+    paddingRight: '1rem',
+  },
+  toolbar: {
+    justifyContent: 'space-between',
+  },
 })
 
 export default useStyles
